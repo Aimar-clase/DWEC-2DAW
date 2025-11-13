@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./js/main.js" type="module"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Task Manager Pro</title>
+</head>
+<body>
+    <main>
+        <section class="seccion-formulario-tareas">
+            <h1>Añade una tarea</h1>
+            <form id="formulario-tarea">
+                <label> Tarea:
+                    <input type="text" id="titulo-tarea">
+                </label>
+                <label>Descripcion:
+                    <input type="text" id="descripcion-tarea">
+                </label>
+                <label>Prioridad:
+                    <select id="prioridad-tarea">
+                        <option value="baja">Baja</option>
+                        <option value="media">Media</option>
+                        <option value="alta">Alta</option>
+                    </select>
+                </label>
+                <input type="submit" value="Enviar" id="btnSubmitTarea">
+            </form>
+        </section>
+        <section class="seccion-listado-tareas">
+            <h1>Listado de tareas</h1>
+            <label class="label-filtros">Filtros:
+                <select id="select-filtro-estado-tarea">
+                    <option value="" selected>Estado</option>
+                    <option value="false">Incompleta</option>
+                    <option value="true">Completa</option>
+                </select>
+                <select id="select-filtro-prioridad-tarea">
+                    <option value="" selected>Prioridad</option>
+                    <option value="baja">Baja</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                </select>
+                <input type="submit" id="btnFiltrar" value="Filtrar">
+            </label>
+            
+            <div id="lista-tareas" class="lista-tareas"></div>
+        </section>
+    </main>
+</body>
+</html>
